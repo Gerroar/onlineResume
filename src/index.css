@@ -1,13 +1,315 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "california";
+  src: url("./fonts/california.ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "oswald";
+  src: url("./fonts/oswald.ttf");
+}
+
+body {
+
+  margin: 0;
+  padding: 0;
+  height: 610vh;
+  overflow-x: hidden;
+  color: white;
+}
+
+
+
+#black-div-start {
+
+  position: absolute;
+  top: -20px;
+  width: 200%;
+  height: 200vh;
+  background-color: black;
+  z-index: 2;
+}
+
+#gerroar-container {
+
+  position: absolute;
+  top: 30px;
+  font-family: "california";
+  font-size: 7em;
+  margin-left: 10px;
+  opacity: 0;
+}
+
+
+#name, #first-sur, #second-sur {
+
+  position: absolute;
+}
+
+
+
+#ger, #man, #ro, #driguez, #ar, #ias {
+
+    position: absolute;
+}
+
+
+
+#man, #driguez, #ias {
+
+  opacity: 0;
+}
+
+/* german */
+
+#man {
+
+  left: 160px;
+}
+
+/* german */
+
+/* rodriguez */
+
+#ro {
+
+  left: 150px;
+}
+
+#driguez {
+
+  left: 260px;
+}
+
+/* rodriguez */
+
+/* arias */
+
+#ar {
+
+  left: 260px;
+}
+
+#ias {
+
+  left: 380px;
+}
+
+
+/* arias */
+
+/* Picture */
+
+#picture {
+
+  margin-top: 48vh;
+  width: 50%;
+
+}
+
+#description {
+  
+  z-index: 4;
+  width: 48%;
+  padding: 10px;
+
+  font-family: "oswald";
+  font-size: 1.8em;
+
+}
+
+
+/* Picture */
+
+.wave,
+.wave::before,
+.wave::after {
+  content: '';
+  position: absolute;
+  top: 122%;
+  left: 95%;
+  width: 188vw;
+  height: 220vw;
+  margin-left: -136vw;
+  transform-origin: 50% 50%;
+  background-color: black;
+  border-radius: 38% 42%;
+  border-color: white;
+  box-shadow: inset 0 0 24vw rgb(142, 74, 206);
+  animation: spin 40s infinite linear;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  
+}
+
+.wave::before {
+  width: 105%;
+  height: 95%;
+  margin-right: 76%;
+  margin-top: -300vw;
+  transform-origin: 49% 51%;
+  border-radius: 40% 38%;
+  box-shadow: inset 0 0 24vw rgba(255,255,0);
+  animation: spin 40s infinite linear;
+}
+
+.wave::after {
+  width: 102%;
+  height: 98%;
+  margin-right: 76%;
+  margin-top: -300vw;
+  transform-origin: 51% 49%;
+  border-radius: 48% 42%;
+  box-shadow: inset 0 0 24vw rgb(7, 204, 0);
+  animation: spin 40s infinite linear;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+
+#tech, #frontend, #backend, #extra {
+
+  font-family: "oswald";
+  border-radius: 8px;
+}
+
+
+#tech {
+
+  margin-top: 100%;
+  margin-left: 5%;
+  width: 40%;
+  height: 2200px;
+ 
+  font-size: 3em;
+  text-align: center;
+
+  background: linear-gradient(-45deg, #4F86F7, #F77E68, #B9F736);
+}
+
+
+.gridContent {
+
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  height: 380px;
+}
+
+#frontend {
+
+  width: 95%;
+  margin-left: 2.5%;
+  height: 760px;
+  background: linear-gradient(-45deg, #FFE600, #F768A5, #4FDCF7);
+
+}
+
+
+#react {
+  margin-left: -18%;
+}
+
+#react img {
+  margin-left: 0%;
+}
+
+#react p{
+  margin-top: -60px;
+}
+
+#backend {
+
+  width: 95%;
+  margin-left: 2.5%;
+  height: 600px;
+  background: linear-gradient(5deg, #03B500, #2E12B5, #BD743C);
+  background-color: rgb(3, 102, 0);
+  margin-top: 10%;
+}
+
+#extra {
+
+  width: 95%;
+  margin-left: 2.5%;
+  height: 560px;
+  background: linear-gradient(-25deg, #8e4ace, #36CF6B, #CFA35F);
+  margin-top: 10%;
+}
+
+.icons {
+
+  width: 60px;
+  height: 60px;
+  margin-left: 25%;
+  margin-bottom: 20%;
+}
+
+.contact {
+
+  margin-top: 10%;
+  margin-left: 5%;
+  width: 40%;
+  height: 100px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.contactIcons {
+  width: 60px;
+  height: 60px;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.contactTxt {
+
+  font-family: 'oswald';
+  margin-top: 20%;
+}
+
+#gmail, #email {
+  
+  background-color: rgb(214, 212, 212);
+}
+
+#phone {
+
+  background-color: rgb(52, 52, 228);
+}
+
+#git {
+
+  background-color: rgb(70, 70, 70);
+}
+
+#gmail img {
+  margin-top: 25%;
+}
+
+#gmail p{
+  margin-top: 12%;
+  font-size: 1.2em;
+}
+
+
+#email img {
+  margin-top: 15%;
+}
+
+#email p {
+  margin-top: 12%;
+  font-size: 1.4em;
+}
+
+#phone p{
+  margin-top: 15%;
+  font-size: 1.8em;
+}
+
+#git p {
+  margin-top: 6%;
+  font-size: 2.8em;
 }
